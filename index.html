@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analysis Course Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f8;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 95%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e2f0d9;
+      border-left: 5px solid #28a745;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Data Analysis Course Registration</h1>
+
+    <h3>Master data analysis and interpretation to drive smart business and project decisions!</h3>
+    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Data_Analysis.jpg" alt="Data Analysis Example">
+
+    <form id="registrationForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required >
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" placeholder=" " >
+
+      <label for="gender">Jinsia:</label>
+      <select id="gender" name="gender" required>
+        <option value=""> </option>
+        <option value="Man">Man</option>
+        <option value="Woman">Woman</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required >
+
+      <label for="message">Descriptions:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Explain your goals or reasons for joining..."></textarea>
+
+      <button type="submit">Submit Now</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const gender = document.getElementById("gender").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const resultDiv = document.getElementById("result");
+
+      resultDiv.innerHTML = `
+        <h3>Maombi Yamepokelewa!</h3>
+        <p><strong>Jina:</strong> ${name}</p>
+        <p><strong>Simu:</strong> ${phone}</p>
+        <p><strong>Jinsia:</strong> ${gender}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Maelezo:</strong> ${message}</p>
+      `;
+
+      resultDiv.style.display = "block";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
