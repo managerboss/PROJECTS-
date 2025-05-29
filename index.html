@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7f8;
+      background: #9ac5d4;
       padding: 20px;
     }
 
@@ -93,7 +93,7 @@
       <label for="phone">Phone Number:</label>
       <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" placeholder=" " >
 
-      <label for="gender">Jinsia:</label>
+      <label for="gender">Gender:</label>
       <select id="gender" name="gender" required>
         <option value=""> </option>
         <option value="Man">Man</option>
@@ -126,12 +126,12 @@
       const resultDiv = document.getElementById("result");
 
       resultDiv.innerHTML = `
-        <h3>Maombi Yamepokelewa!</h3>
-        <p><strong>Jina:</strong> ${name}</p>
-        <p><strong>Simu:</strong> ${phone}</p>
-        <p><strong>Jinsia:</strong> ${gender}</p>
+        <h3>Your application has been received!</h3>
+        <p><strong>Full name:</strong> ${name}</p>
+        <p><strong>Phone Number:</strong> ${phone}</p>
+        <p><strong>Gender:</strong> ${gender}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Maelezo:</strong> ${message}</p>
+        <p><strong>Descriptions:</strong> ${message}</p>
       `;
 
       resultDiv.style.display = "block";
